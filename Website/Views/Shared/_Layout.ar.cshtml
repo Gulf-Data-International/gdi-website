@@ -1,0 +1,189 @@
+﻿
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Canvas</title>
+
+    <environment include="Development">
+        @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
+        <link href="~/css/bootstrap.css" rel="stylesheet" />
+        <link href="~/css/bootstrap-rtl.css" rel="stylesheet" />
+    </environment>
+    <environment exclude="Development">
+        @*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+            asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+            asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+            crossorigin="anonymous"
+            integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" />*@
+        <link href="~/css/bootstrap.css" rel="stylesheet" />
+        <link href="~/css/bootstrap-rtl.css" rel="stylesheet" />
+    </environment>
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/style-rtl.css" rel="stylesheet" />
+
+    @RenderSection("AddStyles", false);
+
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body class="stretched device-xl" data-loader="2" data-animation-in="fadeIn" data-speed-in="1500" data-animation-out="fadeOut" data-speed-out="800">
+
+    @*<div id="wrapper" class="clearfix" style="opacity: 1; animation-duration: 1500ms;">*@
+    <div id="wrapper" class="clearfix" style="opacity: 1; animation-duration: 3500ms;">
+
+        <div id="top-bar">
+
+            <div class="container clearfix">
+
+                <div class="col_half nobottommargin">
+
+                    <!-- Top Links
+                    ============================================= -->
+                    <div class="top-links">
+                        <ul class="sf-js-enabled clearfix" style="touch-action: pan-y;">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="faqs.html">FAQs</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li>
+                                <a href="login-register.html" class="sf-with-ul">Login</a>
+                                <div class="top-link-section" style="display: none;">
+                                    <form id="top-login" role="form">
+                                        <div class="input-group" id="top-login-username">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"><i class="icon-user"></i></div>
+                                            </div>
+                                            <input type="email" class="form-control" placeholder="Email address" required="">
+                                        </div>
+                                        <div class="input-group" id="top-login-password">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"><i class="icon-key"></i></div>
+                                            </div>
+                                            <input type="password" class="form-control" placeholder="Password" required="">
+                                        </div>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="remember-me"> Remember me
+                                        </label>
+                                        <button class="btn btn-danger btn-block" type="submit">Sign in</button>
+                                    </form>
+                                </div>
+                            </li>
+                            @await Html.PartialAsync("_SelectLanguagePartial")
+                        </ul>
+                    </div><!-- .top-links end -->
+
+                </div>
+
+                <div class="col_half fleft col_last nobottommargin">
+
+                    <!-- Top Social
+                    ============================================= -->
+                    <div id="top-social">
+                        <ul>
+                            <li style=""><a href="#" class="si-facebook" data-hover-width="108.625" style="width: 40px;" title="Facebook"><span class="ts-icon"><i class="icon-facebook"></i></span><span class="ts-text">Facebook</span></a></li>
+                            <li style=""><a href="#" class="si-twitter" data-hover-width="94.9625" style="width: 40px;" title="Twitter"><span class="ts-icon"><i class="icon-twitter"></i></span><span class="ts-text">Twitter</span></a></li>
+                            <li style=""><a href="#" class="si-dribbble" data-hover-width="103.2625" style="width: 40px;" title="Dribbble"><span class="ts-icon"><i class="icon-dribbble"></i></span><span class="ts-text">Dribbble</span></a></li>
+                            <li style=""><a href="#" class="si-github" data-hover-width="92.15" style="width: 40px;" title="Github"><span class="ts-icon"><i class="icon-github-circled"></i></span><span class="ts-text">Github</span></a></li>
+                            <li style=""><a href="#" class="si-pinterest" data-hover-width="106" style="width: 40px;" title="Pinterest"><span class="ts-icon"><i class="icon-pinterest"></i></span><span class="ts-text">Pinterest</span></a></li>
+                            <li style=""><a href="#" class="si-instagram" data-hover-width="110.6" style="width: 40px;" title="Instagram"><span class="ts-icon"><i class="icon-instagram2"></i></span><span class="ts-text">Instagram</span></a></li>
+                            <li style=""><a href="tel:+91.11.85412542" class="si-call" data-hover-width="155.875" style="width: 40px;" title="+91.11.85412542"><span class="ts-icon"><i class="icon-call"></i></span><span class="ts-text">+91.11.85412542</span></a></li>
+                            <li style=""><a href="mailto:info@canvas.com" class="si-email3" data-hover-width="152.613" style="width: 40px;" title="info@canvas.com"><span class="ts-icon"><i class="icon-email3"></i></span><span class="ts-text">info@canvas.com</span></a></li>
+                        </ul>
+                    </div><!-- #top-social end -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <header id="header" class="full-header sticky-style-2">
+
+            <div class="container clearfix">
+
+                <!-- Logo
+                ============================================= -->
+                <div id="logo">
+                    <a href="index.html" class="standard-logo" data-dark-logo="/images/logo-dark.png"><img src="/images/logo.png" alt="Canvas Logo"></a>
+                    <a href="index.html" class="retina-logo" data-dark-logo="/images/logo-dark@2x.png"><img src="/images/logo@2x.png" alt="Canvas Logo"></a>
+                </div><!-- #logo end -->
+
+                <div class="top-advert">
+                    <img src="/images/magazine/ad.jpg" alt="Ad">
+                </div>
+
+            </div>
+
+
+            <div id="header-wrap">
+
+                <!-- Primary Navigation
+                ============================================= -->
+                <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                    <div class="container clearfix">
+                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Canvas</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="clearfix"></div>
+        </header>
+
+        <div class="container">
+            <partial name="_CookieConsentPartial" />
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer class="border-top footer text-muted">
+            <div class="col_full  clearfix">
+                &copy; 2019 - Canvas - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+            <div class="col_full clearfix">
+                <div class="col-md-12">
+                    <p>&copy; @System.DateTime.Now.Year - Localization</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="gotoTop" class="icon-angle-up" style="display: block;"></div>
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha256-E/V4cWE4qvAeO5MOhjtGtqDzPndRO1LBk8lJ/PR7CA4=">
+        </script>
+    </environment>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

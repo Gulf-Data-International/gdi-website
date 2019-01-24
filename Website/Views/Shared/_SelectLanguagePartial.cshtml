@@ -1,0 +1,43 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    var cultureItems = LocOptions.Value.SupportedUICultures.Where(Cul => Cul.NativeName != requestCulture.RequestCulture.Culture.NativeName)
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.ThreeLetterISOLanguageName })
+        .ToList();
+    var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
+}
+
+
+    <li class="">
+        <a href="#" class="sf-with-ul"><img src="@String.Concat("/demos/seo/images/flags/" , requestCulture.RequestCulture.UICulture.ThreeLetterISOLanguageName, ".png")" alt="Lang">@requestCulture.RequestCulture.UICulture.ThreeLetterISOLanguageName</a>
+        <ul style="display: none;">
+            <form id="selectLanguage" asp-controller="Home" asp-route-culture="@requestCulture.RequestCulture.UICulture.TwoLetterISOLanguageName"
+                  asp-action="SetLanguage" asp-route-returnUrl="@String.Concat(Context.Request.Scheme,"://", Context.Request.Host, Context.Request.Path)"
+                  method="post" class="form-horizontal" role="form">
+                <input id="culture" type="hidden" name="culture" asp-for="@requestCulture.RequestCulture.UICulture.Name" />
+                @*<label asp-for="@requestCulture.RequestCulture.UICulture.Name">@Localizer["Language"]</label>*@
+
+                @foreach (var item in cultureItems)
+                {
+                    <li ><span class="btn btn-block"  onclick="changeCulture(this);" data-culture="@item.Value"><img src="@String.Concat("/demos/seo/images/flags/" , item.Text, ".png")" alt="Lang">@item.Text</span></li>
+                }
+
+            </form>
+        </ul>
+    </li>
+    <script>
+        function changeCulture(item) {
+            document.getElementById('culture').value = item.getAttribute("data-culture");
+            //console.log(document.getElementById('culture'));
+            //console.log(item.getAttribute("data-culture"));
+            document.getElementById('selectLanguage').submit();
+        }
+
+    </script>
