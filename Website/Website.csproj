@@ -37,6 +37,11 @@
     <None Include="wwwroot\include\getresponse\GetResponseAPI3.class.php" />
     <None Include="wwwroot\include\jobs.php" />
     <None Include="wwwroot\include\landing-5.php" />
+    <None Include="wwwroot\include\phpmailer\src\Exception.php" />
+    <None Include="wwwroot\include\phpmailer\src\OAuth.php" />
+    <None Include="wwwroot\include\phpmailer\src\PHPMailer.php" />
+    <None Include="wwwroot\include\phpmailer\src\POP3.php" />
+    <None Include="wwwroot\include\phpmailer\src\SMTP.php" />
     <None Include="wwwroot\include\quickcontact-subscribe.php" />
     <None Include="wwwroot\include\quickcontact.php" />
     <None Include="wwwroot\include\rsvp.php" />
