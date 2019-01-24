@@ -25,6 +25,7 @@
     <None Include="wwwroot\css\fonts\Simple-Line-Icons.dev.svg" />
     <None Include="wwwroot\css\fonts\Simple-Line-Icons.svg" />
     <None Include="wwwroot\images\icons\iconalt.svg" />
+    <None Include="wwwroot\images\intro\niche\photography1.psd" />
   </ItemGroup>
 
 
