@@ -9,13 +9,9 @@
 
   <ItemGroup>
     <Compile Remove="wwwroot\demos\**" />
-    <Compile Remove="wwwroot\include\**" />
     <Content Remove="wwwroot\demos\**" />
-    <Content Remove="wwwroot\include\**" />
     <EmbeddedResource Remove="wwwroot\demos\**" />
-    <EmbeddedResource Remove="wwwroot\include\**" />
     <None Remove="wwwroot\demos\**" />
-    <None Remove="wwwroot\include\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +22,33 @@
     <None Include="wwwroot\css\fonts\Simple-Line-Icons.svg" />
     <None Include="wwwroot\images\icons\iconalt.svg" />
     <None Include="wwwroot\images\intro\niche\photography1.psd" />
+    <None Include="wwwroot\include\ajax\portfolio-ajax-gallery.php" />
+    <None Include="wwwroot\include\ajax\portfolio-ajax-image.php" />
+    <None Include="wwwroot\include\ajax\portfolio-ajax-slider.php" />
+    <None Include="wwwroot\include\ajax\portfolio-ajax-video.php" />
+    <None Include="wwwroot\include\campaign-monitor\class\base_classes.php" />
+    <None Include="wwwroot\include\campaign-monitor\class\cacert.pem" />
+    <None Include="wwwroot\include\campaign-monitor\class\log.php" />
+    <None Include="wwwroot\include\campaign-monitor\class\serialisation.php" />
+    <None Include="wwwroot\include\campaign-monitor\class\services_json.php" />
+    <None Include="wwwroot\include\campaign-monitor\class\transport.php" />
+    <None Include="wwwroot\include\campaign-monitor\csrest_subscribers.php" />
+    <None Include="wwwroot\include\getresponse.php" />
+    <None Include="wwwroot\include\getresponse\GetResponseAPI3.class.php" />
+    <None Include="wwwroot\include\jobs.php" />
+    <None Include="wwwroot\include\landing-5.php" />
+    <None Include="wwwroot\include\quickcontact-subscribe.php" />
+    <None Include="wwwroot\include\quickcontact.php" />
+    <None Include="wwwroot\include\rsvp.php" />
+    <None Include="wwwroot\include\sendemail-autoresponder.php" />
+    <None Include="wwwroot\include\sendemail-subscribe.php" />
+    <None Include="wwwroot\include\sendemail.php" />
+    <None Include="wwwroot\include\subscribe-cm.php" />
+    <None Include="wwwroot\include\subscribe-email.php" />
+    <None Include="wwwroot\include\subscribe.php" />
+    <None Include="wwwroot\include\twitter\oauth\OAuth.php" />
+    <None Include="wwwroot\include\twitter\oauth\twitteroauth.php" />
+    <None Include="wwwroot\include\twitter\tweets.php" />
   </ItemGroup>
 
 
@@ -36,6 +59,11 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="wwwroot\include\twitter\cache\" />
   </ItemGroup>
 
 </Project>
